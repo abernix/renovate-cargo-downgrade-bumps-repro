@@ -1,5 +1,21 @@
 {
   "extends": [
-    "config:base"
+    ":pinOnlyDevDependencies"
+  ],
+  "semanticCommits": true,
+  "rebaseStalePrs": true,
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "apollo"
+      ],
+      "schedule": "at any time"
+    },
+    {
+      "packageNames": [
+        "event-stream"
+      ],
+      "enabled": false
+    }
   ]
 }
